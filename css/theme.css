@@ -1,0 +1,31 @@
+/* Global theme variables for the CZOO site */
+:root {
+    --bg: #f7f3eb;
+    --surface: #ffffff;
+    --surface-muted: #fbf8f2;
+    --surface-soft: #f3eadc;
+    --text: #1c3a2d;
+    --text-muted: #546451;
+    --accent: #0f6b3a;
+    /* primary green */
+    --accent-soft: #8bab86;
+    --accent-strong: #d4af37;
+    /* gold */
+    --highlight: #f5b500;
+    --border: rgba(28, 58, 45, 0.16);
+    --shadow: 0 20px 40px rgba(17, 44, 28, 0.1);
+    --radius: 24px;
+
+    /* legacy / page-specific aliases */
+    --zoo-green: var(--accent);
+    --zoo-gold: var(--accent-strong);
+    --zoo-black: #0b0b0b;
+    --zoo-white: #ffffff;
+
+    --font-system: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* small utilities */
+:root {
+    --btn-radius: 999px;
+}

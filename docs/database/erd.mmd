@@ -1,0 +1,186 @@
+%% Mermaid ERD for CCC Zoo — main entities (PHASE 2)
+%% Save as erd.mmd and render with a Mermaid-capable tool
+
+erDiagram
+  DIRECTIONS {
+    INT id PK
+    VARCHAR name
+  }
+  USERS {
+    INT id PK
+    INT direction_id FK
+    VARCHAR name
+    VARCHAR email
+  }
+  ROLES {
+    INT id PK
+    VARCHAR name
+  }
+  PERMISSIONS {
+    INT id PK
+    VARCHAR name
+  }
+  MODULES {
+    INT id PK
+    VARCHAR name
+  }
+  USER_ROLES {
+    INT user_id FK
+    INT role_id FK
+  }
+  ROLE_PERMISSIONS {
+    INT role_id FK
+    INT permission_id FK
+  }
+  USER_PERMISSION_OVERRIDES {
+    INT user_id FK
+    INT permission_id FK
+    TINYINT allowed
+  }
+  AUDIT_LOGS {
+    BIGINT id PK
+    INT user_id FK
+    VARCHAR action
+    VARCHAR resource_type
+    VARCHAR resource_id
+  }
+  MEDIA {
+    INT id PK
+    VARCHAR storage_path
+    VARCHAR mime_type
+  }
+  ALBUMS {
+    INT id PK
+    VARCHAR title
+  }
+  MEDIA_ALBUMS {
+    INT album_id FK
+    INT media_id FK
+  }
+  CONTENTS {
+    INT id PK
+    VARCHAR title
+    VARCHAR slug
+    INT status_id FK
+  }
+  CONTENT_STATUSES {
+    INT id PK
+    VARCHAR name
+  }
+  TAGS {
+    INT id PK
+    VARCHAR name
+    VARCHAR slug
+  }
+  CONTENT_TAGS {
+    INT content_id FK
+    INT tag_id FK
+  }
+  CONTENT_MEDIA {
+    INT content_id FK
+    INT media_id FK
+  }
+  CATEGORIES {
+    INT id PK
+    VARCHAR name
+  }
+  EVENTS {
+    INT id PK
+    VARCHAR title
+    VARCHAR slug
+    INT status_id FK
+  }
+  EVENT_STATUSES {
+    INT id PK
+    VARCHAR name
+  }
+  EVENT_OCCURRENCES {
+    INT id PK
+    INT event_id FK
+    DATETIME start_at
+  }
+  SPACES {
+    INT id PK
+    VARCHAR name
+  }
+  ARTISTS {
+    INT id PK
+    VARCHAR name
+  }
+  EVENT_ARTISTS {
+    INT event_id FK
+    INT artist_id FK
+  }
+  PARTNERS {
+    INT id PK
+    VARCHAR name
+  }
+  EVENT_PARTNERS {
+    INT event_id FK
+    INT partner_id FK
+  }
+  EVENT_MEDIA {
+    INT event_id FK
+    INT media_id FK
+  }
+  PROJECTS {
+    INT id PK
+    VARCHAR title
+    INT owner_id FK
+  }
+  PROJECT_STATUS {
+    INT id PK
+    VARCHAR name
+  }
+  PROJECT_MEMBERS {
+    INT project_id FK
+    INT user_id FK
+  }
+  ACTIVITIES {
+    INT id PK
+    INT project_id FK
+    VARCHAR title
+  }
+  ACTIVITY_STATUS {
+    INT id PK
+    VARCHAR name
+  }
+  ACTIVITY_DOCUMENTS {
+    INT activity_id FK
+    INT document_id FK
+  }
+  FINANCE_CATEGORIES {
+    INT id PK
+    VARCHAR name
+  }
+  FINANCE_ENTRIES {
+    INT id PK
+    INT project_id FK
+    DECIMAL amount
+  }
+
+  DIRECTIONS ||--o{ USERS : has
+  USERS ||--o{ USER_ROLES : assigned
+  ROLES ||--o{ USER_ROLES : includes
+  ROLES ||--o{ ROLE_PERMISSIONS : grants
+  PERMISSIONS ||--o{ ROLE_PERMISSIONS : used
+  MODULES ||--o{ PERMISSIONS : groups
+  USERS ||--o{ AUDIT_LOGS : acts
+  MEDIA ||--o{ MEDIA_ALBUMS : contained
+  ALBUMS ||--o{ MEDIA_ALBUMS : has
+  CONTENTS ||--o{ CONTENT_TAGS : tagged
+  TAGS ||--o{ CONTENT_TAGS : tags
+  CONTENTS ||--o{ CONTENT_MEDIA : uses
+  MEDIA ||--o{ CONTENT_MEDIA : used_by
+  EVENTS ||--o{ EVENT_OCCURRENCES : has
+  EVENTS ||--o{ EVENT_ARTISTS : features
+  ARTISTS ||--o{ EVENT_ARTISTS : performs
+  EVENTS ||--o{ EVENT_PARTNERS : partners
+  PARTNERS ||--o{ EVENT_PARTNERS : participates
+  EVENTS ||--o{ EVENT_MEDIA : uses
+  PROJECTS ||--o{ PROJECT_MEMBERS : members
+  PROJECTS ||--o{ ACTIVITIES : contains
+  ACTIVITIES ||--o{ ACTIVITY_DOCUMENTS : attaches
+  PROJECTS ||--o{ FINANCE_ENTRIES : related
+
+%% End of mermaid file

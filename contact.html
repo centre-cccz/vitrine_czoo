@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/plain" data-include="google-head"></script>
+  <title>Contact - Centre culturel congolais</title>
+  <link rel="shortcut icon" href="images/logos/CZoo_Profil.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/logos/CZoo_Profil.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <script type="text/plain" data-include="google-body"></script>
+  <header>
+    <div data-include="nav"></div>
+    <script src="js/include-nav.js" defer></script>
+  </header>
+
+  <section class="hero"
+    style="background-image: url('images/logos/CZoo_Profil.svg'), linear-gradient(135deg, rgba(231,244,235,0.85) 0%, rgba(255,249,241,0.85) 100%); background-repeat: no-repeat; background-position: right 40px center; background-size: 28% auto; background-blend-mode: normal; padding: 3rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto; width: 100%;">
+      <h1 style="color: #153825; font-size: 2.5rem; margin-bottom: 1rem;">Nous Contacter</h1>
+      <p style="font-size: 1.1rem; color: #333; max-width: 800px;">Vous avez des questions, une demande de partenariat
+        ou souhaitez participer à nos événements ? Contactez-nous !</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Coordonnées</h2>
+    <div class="cards">
+      <article>
+        <h3>📍 Adresse</h3>
+        <p>Centre Culturel Congolais « Le Zoo »<br>Avenue Kasa-Vubu nº01<br>Commune de la Gombe<br>Kinshasa 1,
+          République Démocratique du Congo</p>
+      </article>
+      <article>
+        <h3>📧 Email</h3>
+        <p><a href="mailto:contact@ccclezoo.cd"
+            style="color: #1c3a2d; text-decoration: none; font-weight: 600;">contact@ccclezoo.cd</a></p>
+        <p>Réponse dans les 48h en jours ouvrables</p>
+      </article>
+      <article>
+        <h3>📞 Téléphone</h3>
+        <p><a href="tel:+243818259999" style="color: #1c3a2d; text-decoration: none; font-weight: 600;">+243 81 82 59
+            999</a></p>
+        <p>Lundi-Vendredi : 09h-17h</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" style="background: #f8f6f2;">
+    <h2>Formulaire de Contact</h2>
+    <p>Remplissez ce formulaire et nous vous répondrons dans les plus brefs délais.</p>
+
+    <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+    <form class="registration-form" action="contact-submit.php" method="post">
+
+      <div class="form-group">
+        <label for="name">Nom complet *</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Sujet *</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="category">Catégorie *</label>
+        <select id="category" name="category" required>
+          <option value="">-- Sélectionnez une option --</option>
+          <option value="artiste">Je suis artiste</option>
+          <option value="partenariat">Demande de partenariat</option>
+          <option value="reservation">Réservation d'espace</option>
+          <option value="atelier">Inscription à un atelier</option>
+          <option value="autre">Autre demande</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="btn" style="width: 100%; text-align: center;">Envoyer</button>
+    </form>
+  </section>
+
+  <section class="section">
+    <h2>Suivez-nous</h2>
+    <p style="margin-bottom: 2rem;">Restez connectés avec le Centre culturel congolais via nos réseaux sociaux pour les
+      dernières actualités et mises à jour.</p>
+
+    <div class="social-icons" style="justify-content: center; gap: 2rem;">
+      <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"
+        class="social-icon instagram" style="min-width: 60px; min-height: 60px; font-size: 1.4rem;">📷</a>
+      <a href="https://www.youtube.com/channel/UClet9jTSrl4wcLyTVB92WQA" target="_blank" rel="noopener noreferrer"
+        aria-label="YouTube" class="social-icon youtube"
+        style="min-width: 60px; min-height: 60px; font-size: 1.4rem;">▶</a>
+      <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="X" class="social-icon x"
+        style="min-width: 60px; min-height: 60px; font-size: 1.4rem;">𝕏</a>
+      <a href="https://telegram.org" target="_blank" rel="noreferrer" aria-label="Telegram" class="social-icon telegram"
+        style="min-width: 60px; min-height: 60px; font-size: 1.4rem;">✈</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Équipe de Direction</h2>
+    <p>Découvrez les membres de notre équipe dirigeante dédiée à la promotion de la culture congolaise.</p>
+
+    <div class="directors-grid">
+      <div class="director-card">
+        <img src="images/directions/Directeur Général.png" alt="Directeur Général" class="director-image"
+          onerror="this.src='images/placeholder.svg'">
+        <h3>Directeur Général</h3>
+        <p>Chef de l'établissement responsable de la gestion globale et de la mise en œuvre des objectifs culturels.</p>
+      </div>
+      <div class="director-card">
+        <img src="images/directions/Directeur Générale Adjointe.png" alt="Directeur Générale Adjointe"
+          class="director-image" onerror="this.src='images/placeholder.svg'">
+        <h3>Directeur Générale Adjointe</h3>
+        <p>Assiste le Directeur Général dans la coordination des activités et la supervision des directions.</p>
+      </div>
+      <div class="director-card">
+        <img src="images/directions/Directeur de l'Animation.png" alt="Directeur de l'Animation" class="director-image"
+          onerror="this.src='images/placeholder.svg'">
+        <h3>Directeur de l'Animation</h3>
+        <p>Pilote les programmes artistiques, événements, ateliers et spectacles culturels.</p>
+      </div>
+      <div class="director-card">
+        <img src="images/directions/Directeur Administratif.png" alt="Directeur Administratif" class="director-image"
+          onerror="this.src='images/placeholder.svg'">
+        <h3>Directeur Administratif</h3>
+        <p>Gère l'administration générale, les ressources humaines et le fonctionnement administratif.</p>
+      </div>
+      <div class="director-card">
+        <img src="images/directions/Directeur de Finance.png" alt="Directeur de Finance" class="director-image"
+          onerror="this.src='images/placeholder.svg'">
+        <h3>Directeur de Finance</h3>
+        <p>Responsable de la gestion financière, du budget et des ressources économiques.</p>
+      </div>
+      <div class="director-card">
+        <img src="images/directions/Directeur de la Bibliothèque.png" alt="Directeur de la Bibliothèque"
+          class="director-image" onerror="this.src='images/placeholder.svg'">
+        <h3>Directeur de la Bibliothèque</h3>
+        <p>S'occupe de faciliter les recherches aux lecteurs et de permettre à la population Kinois de se donnée à la
+          lecture.</p>
+      </div>
+      <div class="director-card">
+        <img src="images/directions/Directeur de l'Intendance.png" alt="Directeur de l'Intendance"
+          class="director-image" onerror="this.src='images/placeholder.svg'">
+        <h3>Directeur de l'Intendance</h3>
+        <p>Assure la maintenance, l'entretien des locaux et la gestion des installations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #f8f6f2;">
+    <h2>Organe Consultatif d'Experts</h2>
+    <p>Le centre est assisté par un organe consultatif composé d'experts en culture, arts et patrimoine pour garantir la
+      qualité et la pertinence de ses actions.</p>
+    <div style="max-width: 800px; margin: 1.5rem auto;">
+      <p style="line-height: 1.8; color: #555;">Cet organe contribue à :</p>
+      <ul style="line-height: 2; margin: 1rem 0;">
+        <li>✓ L'orientation stratégique culturelle du centre</li>
+        <li>✓ L'évaluation des programmes et des performances</li>
+        <li>✓ La promotion de la qualité artistique et académique</li>
+        <li>✓ Les partenariats avec institutions nationales et internationales</li>
+      </ul>
+    </div>
+  </section>
+  <div class="cards">
+    <article style="text-align: center;">
+      <h3>Lundi à Vendredi</h3>
+      <p style="font-size: 1.2rem; color: #1c3a2d; font-weight: 600;">09:00 - 17:00</p>
+    </article>
+    <article style="text-align: center;">
+      <h3>Samedi</h3>
+      <p style="font-size: 1.2rem; color: #1c3a2d; font-weight: 600;">10:00 - 14:00</p>
+    </article>
+    <article style="text-align: center;">
+      <h3>Dimanche & Jours fériés</h3>
+      <p style="font-size: 1.2rem; color: #1c3a2d; font-weight: 600;">Fermé</p>
+    </article>
+  </div>
+  <p style="text-align: center; margin-top: 1.5rem; color: #666; font-size: 0.9rem;">* Horaires spéciaux pour les
+    événements et spectacles</p>
+  </section>
+
+  <footer>
+    <div data-include="footer"></div>
+  </footer>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const statusEl = document.getElementById('form-status');
+      if (!statusEl) return;
+
+      const success = params.get('success') === '1';
+      const error = params.get('error') === '1';
+
+      if (success) {
+        statusEl.textContent = 'Merci ! Votre demande a bien été enregistrée. Nous vous répondrons prochainement.';
+        statusEl.classList.add('is-visible', 'success');
+      } else if (error) {
+        statusEl.textContent = 'Une erreur s’est produite. Veuillez réessayer ou nous contacter directement par email.';
+        statusEl.classList.add('is-visible', 'error');
+      }
+    })();
+  </script>
+</body>
+
+</html>

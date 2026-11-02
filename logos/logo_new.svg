@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-labelledby="logoTitle logoDesc">
+	<title id="logoTitle">Logo Centre culturel congolais Le Zoo</title>
+		<desc id="logoDesc">Symbole moderne vert et doré du Centre culturel Congolais Le Zoo.</desc>
+			<defs>
+				<linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+					<stop offset="0%" stop-color="#d4af37" />
+					<stop offset="100%" stop-color="#f5b500" />
+				</linearGradient>
+			</defs>
+			<rect width="320" height="80" rx="18" fill="none" />
+			<circle cx="52" cy="40" r="28" fill="#0f6b3a" />
+			<path d="M43 26c10-8 25-6 32 4l-6 7c-5-7-16-9-24-4-4 2-6 6-6 10h-8c0-8 4-15 12-17z" fill="url(#goldGrad)" />
+			<text x="100" y="45" font-family="Segoe UI, sans-serif" font-size="26" font-weight="700" fill="#153825">Le Zoo</text>
+				<text x="100" y="65" font-family="Segoe UI, sans-serif" font-size="12" fill="#546451">Centre culturel congolais</text>
+				</svg>
+				

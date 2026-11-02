@@ -1,0 +1,134 @@
+:root {
+  --component-radius: 22px;
+  --component-shadow: 0 20px 42px rgba(17, 44, 28, 0.10);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.section-heading .eyebrow {
+  color: var(--accent-strong);
+  margin-bottom: 0.5rem;
+}
+
+.section-title,
+.section-heading h2 {
+  font-size: clamp(1.55rem, 2.2vw, 2.15rem);
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text);
+}
+
+.section-subtitle {
+  margin: 0.65rem 0 0;
+  max-width: 48rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.btn,
+.btn-cta,
+.btn-outline-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  padding: 0.9rem 1.35rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-cta,
+.btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: var(--zoo-white, #fff);
+  box-shadow: 0 12px 24px rgba(15, 107, 58, 0.16);
+}
+
+.btn-outline-cta {
+  background: transparent;
+  color: var(--accent);
+  border-color: rgba(15, 107, 58, 0.2);
+}
+
+.btn:hover,
+.btn-cta:hover,
+.btn-outline-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(15, 107, 58, 0.2);
+}
+
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.intent-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.1rem 1rem;
+  border-radius: var(--component-radius);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: var(--component-shadow);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.intent-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 44px rgba(17, 44, 28, 0.14);
+}
+
+.intent-card .icon {
+  font-size: 1.45rem;
+  color: var(--accent);
+}
+
+.intent-card strong {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.intent-card span {
+  font-size: 0.92rem;
+  line-height: 1.52;
+  color: var(--text-muted);
+}
+
+.footer-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.85rem;
+}
+
+.footer-quick-links a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-quick-links a:hover {
+  color: var(--accent-strong);
+}
+
+@media (max-width: 640px) {
+  .intent-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

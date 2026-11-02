@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Centre culturel congolais Le Zoo — portail d’entrée vers l’accueil institutionnel, la programmation et les services culturels." />
+    <meta name="robots" content="index,follow" />
+    <title>Centre culturel congolais Le Zoo</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <style>
+      :root { color-scheme: light; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at top, rgba(212,175,55,0.2), transparent 32%), #f7f3eb;
+        color: #1c3a2d;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .intro-screen {
+        text-align: center;
+        padding: 2rem;
+        max-width: 720px;
+      }
+      .intro-logo {
+        width: min(260px, 60vw);
+        height: auto;
+        margin-bottom: 1.2rem;
+      }
+      .intro-screen h1 {
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
+        margin: 0 0 0.8rem;
+      }
+      .intro-screen p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #546451;
+        margin: 0 0 1.2rem;
+      }
+      .intro-screen .meta {
+        font-size: 0.95rem;
+        color: #6b786e;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .intro-screen { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="intro-screen" aria-label="Page d’introduction">
+      <img src="images/logos/CZoo_Profil.svg" alt="Logo officiel du Centre culturel congolais Le Zoo" class="intro-logo" />
+      <h1>Centre culturel congolais Le Zoo</h1>
+      <p>Bienvenue au Centre culturel congolais Le Zoo. Vous allez être redirigé vers la page d’accueil du site institutionnel.</p>
+      <p class="meta">Animation de transition en cours…</p>
+    </main>
+    <script>
+      const target = 'accueil.html';
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const delay = reduceMotion ? 0 : 2200;
+      setTimeout(() => {
+        window.location.replace(target);
+      }, delay);
+    </script>
+  </body>
+</html>
