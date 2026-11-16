@@ -1789,7 +1789,7 @@ footer::before {
 .roadmap-node.node2 {
   top: 10%;
   right: 10%;
-
+}
   .roadmap-node.node3 {
     top: 32%;
     right: 0;
@@ -2045,8 +2045,6 @@ footer::before {
     }
   }
 
-  font-weight: 500;
-}
 
 /* Media thumbnails (shared) */
 .media-grid {
