@@ -41,7 +41,16 @@
         nav.classList.toggle('scrolled', window.scrollY > 12);
     }
 
+    function ensureIcons() {
+        if (document.querySelector('link[href*="font-awesome"]')) return;
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+        document.head.appendChild(link);
+    }
+
     async function loadAllIncludes() {
+        ensureIcons();
         const includes = document.querySelectorAll('[data-include]');
         const promises = [];
         includes.forEach(el => {

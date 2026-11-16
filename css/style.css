@@ -2387,3 +2387,15 @@ footer::before {
 .media-modal .media-close:focus {
   outline: 3px solid rgba(255, 255, 255, 0.2);
 }
+
+/* ===== Icones reseaux sociaux : lisibles sur toutes les pages (nav + pied de page + contact) ===== */
+.social-icon i { font-size: 1.1rem; line-height: 1; }
+.main-nav .social-links { gap: .4rem; }
+.main-nav a.social-icon, .main-nav a.social-icon:hover { color: #fff; padding: 0; min-width: 38px; min-height: 38px; }
+.main-nav a.social-icon.instagram, .main-nav a.social-icon.instagram:hover { background: radial-gradient(circle at 30% 30%, #feda75, #d62976 40%, #962fbf 70%, #405de6 100%); }
+.main-nav a.social-icon.youtube, .main-nav a.social-icon.youtube:hover { background: #ff0000; }
+.main-nav a.social-icon.x, .main-nav a.social-icon.x:hover { background: #000; }
+.main-nav a.social-icon.telegram, .main-nav a.social-icon.telegram:hover { background: #0088cc; }
+.social-icon.facebook { background: #1877f2; }
+.social-icon.whatsapp { background: #25d366; }
+.social-icons .social-icon { color: #fff; }
