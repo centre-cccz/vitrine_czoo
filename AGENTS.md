@@ -21,7 +21,7 @@ Ce dépôt appartient au Centre Culturel Congolais « Le Zoo ». Le but est de m
 - `contact-submit.php` : zone de traitement du contact
 - `db.php` : layer de données MySQL
 - `docs/` : source de vérité structurelle
-- `Gestion_Interne_CZoo/` : future architecture interne à traiter avec précaution
+- `Gestion_Interne-CZoo/` : future architecture interne à traiter avec précaution
 
 ## Points de vigilance
 
