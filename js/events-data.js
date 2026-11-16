@@ -86,7 +86,7 @@ window.CZOO_EVENTS = [
         location: 'Galerie CZoo',
         summary: 'Exposition photographique sur le patrimoine et les grandes figures féminines du Congo.',
         description: 'Parcours visuel et textuel valorisant la présence, la force et la créativité des femmes dans la culture congolaise.',
-        image: 'images/evenements/A%20venir/la%20femme%20comgolais%20dans%20l'art/art_femme.jpg',
+        image: 'images/evenements/A%20venir/la-femme-congolaise-dans-art/art_femme.jpg',
         tags: ['Exposition', 'Patrimoine'],
         slug: 'femme-art-2026'
     },
