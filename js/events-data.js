@@ -1,6 +1,7 @@
 window.CZOO_EVENTS = [
     {
         id: 'koskin-2026',
+        start: '2026-07-10', end: '2026-07-10',
         title: 'KOSKIN 2026',
         category: 'spectacle',
         date: '10 Juillet 2026',
@@ -14,6 +15,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'fekipaf-2026',
+        start: '2026-07-16', end: '2026-07-18',
         title: 'FEKIPAF 2026',
         category: 'spectacle',
         date: '16 - 18 Juillet 2026',
@@ -27,6 +29,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'music-acoustique-2026',
+        start: '2026-08-15', end: '2026-08-15',
         title: 'Musique Acoustique',
         category: 'spectacle',
         date: '15 Août 2026',
@@ -40,6 +43,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'expo-vente-2026',
+        start: '2026-08-21', end: '2026-08-22',
         title: 'Expo Vente 2026',
         category: 'exposition',
         date: '21 - 22 Août 2026',
@@ -53,6 +57,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'lecture-publique-2026',
+        start: '2026-09-09', end: '2026-09-09',
         title: 'Lecture Publique',
         category: 'atelier',
         date: '09 Septembre 2026',
@@ -66,6 +71,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'atelier-jeunes-2026',
+        recurring: true,
         title: 'Ateliers Jeunesse',
         category: 'atelier',
         date: 'Tous les mercredis et samedis',
@@ -79,6 +85,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'femme-art-2026',
+        start: '2026-08-31', end: '2026-09-14',
         title: 'La femme congolaise dans l’art',
         category: 'exposition',
         date: '31 Août - 14 Septembre 2026',
@@ -92,6 +99,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'jucotej-2026',
+        start: '2026-05-07', end: '2026-05-14',
         title: 'JUCOTEJ 2026',
         category: 'spectacle',
         date: '07 - 14 Mai 2026',
@@ -105,6 +113,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'jazz-2026',
+        start: '2026-08-29', end: '2026-08-29',
         title: 'Kinshasa Jazz 2026',
         category: 'spectacle',
         date: '29 Août 2026',
@@ -118,6 +127,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'masterclasses-2026',
+        start: '2026-08-04', end: '2026-08-06',
         title: 'Masterclasses et Ateliers',
         category: 'atelier',
         date: '04 - 06 Août 2026',
@@ -131,6 +141,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'art-contemporain-2026',
+        start: '2026-11-01', end: '2026-11-30', approximate: true,
         title: 'Art contemporain congolais',
         category: 'exposition',
         date: 'Novembre 2026',
