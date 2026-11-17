@@ -153,4 +153,32 @@ window.CZOO_EVENTS = [
         tags: ['Exposition', 'Contemporain'],
         slug: 'art-contemporain-2026'
     }
+    ,{
+        id: 'festival-film-europeen-2026',
+        start: '2026-05-25', end: '2026-05-29',
+        title: '10e Festival du Film Européen',
+        category: 'spectacle',
+        date: '25 - 29 Mai 2026',
+        time: '',
+        location: 'Centre culturel Le Zoo',
+        summary: 'Une semaine de projections, de rencontres et d’échanges interculturels autour du cinéma européen.',
+        description: 'Le 10e Festival du Film Européen a réuni le public autour de sept œuvres, de rencontres culturelles et d’un concert de clôture au Centre culturel congolais « Le Zoo ».',
+        image: 'images/evenements/pass%C3%A9/festivale%20du%20film/festival%20du%20film01.jpeg',
+        tags: ['Cinéma', 'Festival'],
+        slug: 'festival-film-europeen-2026'
+    },
+    {
+        id: 'echos-corps-ame-2026',
+        start: '2026-04-28', end: '2026-04-30',
+        title: 'Échos du corps et de l’âme',
+        category: 'spectacle',
+        date: '28 - 30 Avril 2026',
+        time: '',
+        location: 'Centre culturel Le Zoo',
+        summary: 'Journée internationale de la danse et du jazz : ateliers, restitution de spectacles, masterclass et concert.',
+        description: 'Quatre temps forts autour de la danse et du jazz : atelier de danse, restitution publique de sept spectacles, masterclass jazz et concert avec jam session.',
+        image: 'images/portail/heros02.jpg',
+        tags: ['Danse', 'Jazz'],
+        slug: 'echos-corps-ame-2026'
+    }
 ];

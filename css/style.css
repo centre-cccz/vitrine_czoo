@@ -2399,3 +2399,10 @@ footer::before {
 .social-icon.facebook { background: #1877f2; }
 .social-icon.whatsapp { background: #25d366; }
 .social-icons .social-icon { color: #fff; }
+
+/* ===== Logo anime : flottement doux, petit salut au survol (desactive si mouvement reduit) ===== */
+.brand-link .logo { animation: czoo-float 5s ease-in-out infinite; filter: drop-shadow(0 4px 8px rgba(15,107,58,.25)); }
+.brand-link:hover .logo, .brand-link:focus-visible .logo { animation: czoo-wiggle .9s ease-in-out; }
+@keyframes czoo-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes czoo-wiggle { 0% { transform: rotate(0) scale(1); } 25% { transform: rotate(-6deg) scale(1.08); } 55% { transform: rotate(5deg) scale(1.08); } 100% { transform: rotate(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .brand-link .logo { animation: none !important; } }

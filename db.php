@@ -7,6 +7,8 @@ class Database
 
     private function __construct()
     {
+        self::loadEnvironment();
+
         // DB credentials are read from environment variables per ADR-0002.
         // Fallback values are provided to ease local development but should NOT be used in production.
         $environment = getenv('APP_ENV') ?: 'development';
@@ -30,6 +32,36 @@ class Database
 
         $this->pdo = new PDO($dsn, $user, $pass, $options);
         $this->initSchema();
+    }
+
+    private static function loadEnvironment(): void
+    {
+        $documentRoot = $_SERVER['DOCUMENT_ROOT'] ?? '';
+        $environmentDirectory = $documentRoot !== ''
+            ? dirname(rtrim($documentRoot, DIRECTORY_SEPARATOR))
+            : dirname(__DIR__);
+        $environmentFile = $environmentDirectory . DIRECTORY_SEPARATOR . '.env';
+
+        if (!is_file($environmentFile)) {
+            return;
+        }
+        if (!is_readable($environmentFile)) {
+            throw new RuntimeException('Application environment file is not readable.');
+        }
+
+        $variables = parse_ini_file($environmentFile, false, INI_SCANNER_RAW);
+        if ($variables === false) {
+            throw new RuntimeException('Application environment file could not be parsed.');
+        }
+
+        foreach ($variables as $name => $value) {
+            if (getenv($name) === false) {
+                $value = (string) $value;
+                putenv($name . '=' . $value);
+                $_ENV[$name] = $value;
+                $_SERVER[$name] = $value;
+            }
+        }
     }
 
     public static function getInstance(): Database
