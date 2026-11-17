@@ -1,6 +1,7 @@
 window.CZOO_EVENTS = [
     {
         id: 'koskin-2026',
+        start: '2026-07-10', end: '2026-07-10',
         title: 'KOSKIN 2026',
         category: 'spectacle',
         date: '10 Juillet 2026',
@@ -14,6 +15,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'fekipaf-2026',
+        start: '2026-07-16', end: '2026-07-18',
         title: 'FEKIPAF 2026',
         category: 'spectacle',
         date: '16 - 18 Juillet 2026',
@@ -27,6 +29,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'music-acoustique-2026',
+        start: '2026-08-15', end: '2026-08-15',
         title: 'Musique Acoustique',
         category: 'spectacle',
         date: '15 Août 2026',
@@ -40,6 +43,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'expo-vente-2026',
+        start: '2026-08-21', end: '2026-08-22',
         title: 'Expo Vente 2026',
         category: 'exposition',
         date: '21 - 22 Août 2026',
@@ -53,6 +57,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'lecture-publique-2026',
+        start: '2026-09-09', end: '2026-09-09',
         title: 'Lecture Publique',
         category: 'atelier',
         date: '09 Septembre 2026',
@@ -66,6 +71,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'atelier-jeunes-2026',
+        recurring: true,
         title: 'Ateliers Jeunesse',
         category: 'atelier',
         date: 'Tous les mercredis et samedis',
@@ -79,6 +85,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'femme-art-2026',
+        start: '2026-08-31', end: '2026-09-14',
         title: 'La femme congolaise dans l’art',
         category: 'exposition',
         date: '31 Août - 14 Septembre 2026',
@@ -86,12 +93,13 @@ window.CZOO_EVENTS = [
         location: 'Galerie CZoo',
         summary: 'Exposition photographique sur le patrimoine et les grandes figures féminines du Congo.',
         description: 'Parcours visuel et textuel valorisant la présence, la force et la créativité des femmes dans la culture congolaise.',
-        image: 'images/evenements/A%20venir/la%20femme%20comgolais%20dans%20l'art/art_femme.jpg',
+        image: 'images/evenements/A%20venir/la-femme-congolaise-dans-art/art_femme.jpg',
         tags: ['Exposition', 'Patrimoine'],
         slug: 'femme-art-2026'
     },
     {
         id: 'jucotej-2026',
+        start: '2026-05-07', end: '2026-05-14',
         title: 'JUCOTEJ 2026',
         category: 'spectacle',
         date: '07 - 14 Mai 2026',
@@ -105,6 +113,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'jazz-2026',
+        start: '2026-08-29', end: '2026-08-29',
         title: 'Kinshasa Jazz 2026',
         category: 'spectacle',
         date: '29 Août 2026',
@@ -118,6 +127,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'masterclasses-2026',
+        start: '2026-08-04', end: '2026-08-06',
         title: 'Masterclasses et Ateliers',
         category: 'atelier',
         date: '04 - 06 Août 2026',
@@ -131,6 +141,7 @@ window.CZOO_EVENTS = [
     },
     {
         id: 'art-contemporain-2026',
+        start: '2026-11-01', end: '2026-11-30', approximate: true,
         title: 'Art contemporain congolais',
         category: 'exposition',
         date: 'Novembre 2026',
@@ -141,5 +152,33 @@ window.CZOO_EVENTS = [
         image: 'images/evenements/A%20venir/Art%20contemporain%20congolais/Atelier.jpg',
         tags: ['Exposition', 'Contemporain'],
         slug: 'art-contemporain-2026'
+    }
+    ,{
+        id: 'festival-film-europeen-2026',
+        start: '2026-05-25', end: '2026-05-29',
+        title: '10e Festival du Film Européen',
+        category: 'spectacle',
+        date: '25 - 29 Mai 2026',
+        time: '',
+        location: 'Centre culturel Le Zoo',
+        summary: 'Une semaine de projections, de rencontres et d’échanges interculturels autour du cinéma européen.',
+        description: 'Le 10e Festival du Film Européen a réuni le public autour de sept œuvres, de rencontres culturelles et d’un concert de clôture au Centre culturel congolais « Le Zoo ».',
+        image: 'images/evenements/pass%C3%A9/festivale%20du%20film/festival%20du%20film01.jpeg',
+        tags: ['Cinéma', 'Festival'],
+        slug: 'festival-film-europeen-2026'
+    },
+    {
+        id: 'echos-corps-ame-2026',
+        start: '2026-04-28', end: '2026-04-30',
+        title: 'Échos du corps et de l’âme',
+        category: 'spectacle',
+        date: '28 - 30 Avril 2026',
+        time: '',
+        location: 'Centre culturel Le Zoo',
+        summary: 'Journée internationale de la danse et du jazz : ateliers, restitution de spectacles, masterclass et concert.',
+        description: 'Quatre temps forts autour de la danse et du jazz : atelier de danse, restitution publique de sept spectacles, masterclass jazz et concert avec jam session.',
+        image: 'images/portail/heros02.jpg',
+        tags: ['Danse', 'Jazz'],
+        slug: 'echos-corps-ame-2026'
     }
 ];

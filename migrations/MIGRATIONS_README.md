@@ -18,11 +18,13 @@ Ordre recommandé d'exécution
 3. Appliquer migrations/0003_seed_roles_permissions.sql (INSERT IGNORE pour rôles/permissions et liaisons). Ce script suppose que roles et permissions existent (ou les insère si elles n'existent pas).
 
 Procédure simple (exemple)
-1. mysqldump --single-transaction --routines --triggers --events -u root -p cczzoo > backup-pre-0002.sql
-2. Sur staging : mysql -u user -p cczzoo < migrations/0002_content_media_events.sql
+1. Faire un export SQL de sauvegarde de la base cible avant toute modification. Pour la production cPanel, la base déclarée est `ccclezoo_CZoo` ; utiliser phpMyAdmin ou un accès MySQL autorisé par l'hébergeur.
+2. Sur staging uniquement, après configuration des identifiants adaptés : `mysql -u <DB_USER> -p ccclezoo_CZoo < migrations/0002_content_media_events.sql`
 3. Vérifier erreurs SQL et structure (SHOW TABLES; DESCRIBE ...)
-4. Sur staging : mysql -u user -p cczzoo < migrations/0003_seed_roles_permissions.sql
+4. Sur staging : `mysql -u <DB_USER> -p ccclezoo_CZoo < migrations/0003_seed_roles_permissions.sql`
 5. Lancer scripts/check_seeds.php pour confirmer les seeds (ou exécuter manuellement les requêtes SELECT décrites ci‑dessous)
+
+Les commandes ci-dessus sont des exemples et supposent que l'hôte et l'utilisateur MySQL sont configurés pour cet accès. Le nom de la base ne suffit pas à déterminer ces paramètres. Ne pas importer de migration sur la base de production avant d'avoir vérifié son schéma et validé une sauvegarde restaurable.
 
 Vérifications post-migration (non exhaustif)
 - Vérifier la présence et les colonnes des tables nouvelles : media, contents, events, projects, activities, finance_entries

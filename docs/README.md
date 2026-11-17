@@ -20,10 +20,10 @@ Le projet observé est avant tout un site public statique en HTML/CSS/JavaScript
 - Architecture actuelle : statique, multi-pages, HTML/CSS/JS
 - Frontend : pages HTML réutilisant un nav/footer partagé via includes
 - Backend : limité à un wrapper PDO et un traitement PHP de contact
-- Base de données : MySQL local (DSN défini dans `db.php`), table `contact_requests`
+- Base de données : MySQL via PDO. La base locale de développement s'appelle `ccczoo` par défaut ; la base de production déclarée sur cPanel/phpMyAdmin est `ccclezoo_CZoo`.
 - Authentification : non présent sur le site public ; aucune auth réelle documentée
 - Sécurité : basique, sans gestion de secrets, sans environnement de configuration séparé
-- Déploiement : non documenté dans le dépôt; à confirmer chez le Centre
+- Déploiement : hébergement cPanel confirmé ; le schéma effectivement présent dans `ccclezoo_CZoo` reste à vérifier
 - Gestion interne : prévue comme architecture distincte, mais non implémentée
 
 ## Architecture du projet
@@ -31,7 +31,7 @@ Le projet observé est avant tout un site public statique en HTML/CSS/JavaScript
 - Site public : pages de contenu, actualités, galerie, programmation, contact, à propos
 - Gestion interne : projet séparé, non encore déployé / implémenté
 - Assets : images, logos, visuels, documents institutionnels
-- Services externes : CDN Bootstrap, Font Awesome, mail PHP locale, base MySQL locale
+- Services externes : CDN Bootstrap, Font Awesome, mail PHP et base MySQL ; les paramètres de connexion de production sont à configurer dans l’environnement cPanel
 
 ## Documentation principale
 
