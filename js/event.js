@@ -27,11 +27,12 @@
         }
 
         title.textContent = eventData.title;
-        meta.innerHTML = `${sanitize(eventData.date)} • ${sanitize(eventData.time)} • ${sanitize(eventData.location)}`;
+        meta.textContent = [eventData.date, eventData.time, eventData.location].filter(Boolean).join(' • ');
+        [eventData.date, eventData.time || '\u00c0 pr\u00e9ciser', eventData.location].forEach((value, i) => { const n = document.getElementById(['eventDate', 'eventTime', 'eventLocation'][i]); if (n) n.textContent = value; });
         description.textContent = eventData.description;
         image.src = eventData.image;
         image.alt = `Visuel de ${eventData.title}`;
-        image.addEventListener('error', () => { image.src = 'images/placeholder.svg'; });
+        image.addEventListener('error', () => { image.src = 'images/placeholder.svg'; }, { once: true });
         if (hero) {
             hero.style.backgroundImage = `linear-gradient(180deg, rgba(15, 107, 58, 0.88), rgba(15, 107, 58, 0.55)), url('${eventData.image}')`;
             hero.style.backgroundSize = 'cover';
@@ -66,9 +67,29 @@
         });
     }
 
+    function renderReport(e) {
+        const box = document.getElementById('eventReport');
+        if (!e || !box) return;
+        const reports = window.CZOO_REPORTS || {};
+        const past = !e.recurring && e.end && new Date(e.end + 'T23:59:59') < new Date();
+        const add = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; n.textContent = text; box.appendChild(n); return n; };
+        box.hidden = false;
+        add('h3', '', 'Rapport de l\u2019\u00e9v\u00e9nement');
+        if (reports[e.id]) {
+            add('p', '', 'Le bilan complet de cet \u00e9v\u00e9nement est disponible.');
+            const a = add('a', 'btn btn-cta', 'Lire le rapport'); a.href = 'rapport.html?id=' + encodeURIComponent(e.id);
+        } else if (past) {
+            add('p', '', 'Le rapport de cet \u00e9v\u00e9nement est en cours de r\u00e9daction.');
+            const a = add('a', 'btn btn-outline-cta', 'Voir le mod\u00e8le du rapport'); a.href = 'rapport.html?id=' + encodeURIComponent(e.id);
+        } else {
+            add('p', '', 'Le rapport sera publi\u00e9 apr\u00e8s l\u2019\u00e9v\u00e9nement.');
+        }
+        if (past) { const f = add('a', 'btn btn-outline-cta mt-2', 'Donner mon avis'); f.href = 'contact.html?objet=avis&event=' + encodeURIComponent(e.id); }
+    }
     document.addEventListener('DOMContentLoaded', () => {
         const eventId = getParam('id');
         const eventData = (window.CZOO_EVENTS || []).find(evt => evt.id === eventId);
         renderEvent(eventData);
+        renderReport(eventData);
     });
 })();
