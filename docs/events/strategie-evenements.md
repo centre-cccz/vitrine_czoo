@@ -82,3 +82,17 @@ Une migration `0004` serait nécessaire. Elle ne doit pas être exécutée avant
 ## 8. Indicateurs de clôture
 
 Fréquentation (inscrits, présents), recettes et coûts, partenaires mobilisés, satisfaction, photos et vidéos, enseignements. Ces données alimentent le rapport annuel soumis à la tutelle.
+
+## 9. Rapport d’activité (obligatoire pour chaque événement)
+
+Chaque événement ou activité du Centre donne lieu à un rapport public, quel que soit son format. Le rapport est la dernière étape du circuit (phase 6) et alimente le rapport annuel soumis à la tutelle.
+
+**Contenu standard** : objectifs et public ciblé ; fréquentation (inscrits, présents) ; déroulé réalisé ; points forts ; difficultés rencontrées ; budget, recettes et partenaires mobilisés ; recommandations ; photos, vidéos et retombées médias ; avis du public.
+
+**Statuts** : `prévu` (publié après l’événement) → `en préparation` → `publié` (avec PDF officiel).
+
+**Mise en œuvre actuelle (site public)** : `js/reports-data.js` (une entrée par événement, clé = identifiant dans `js/events-data.js`), pages `rapports.html` (liste) et `rapport.html?id=...` (fiche). Les pages programmation, galerie, événement et actualités renvoient vers le rapport ; un événement terminé sans rapport affiche « Rapport en préparation » et le modèle attendu.
+
+**Cible (Gestion interne)** : table `event_reports (event_id, statut, résumé, chiffres, objectifs, points_forts, difficultés, budget, perspectives, document_id, publié_par, publié_le)` liée à `events` et `internal_documents`, avec la permission `rapports.publish` (validation par la Direction Générale avant publication). À intégrer à la migration `0004`.
+
+**Règle** : un événement ne passe à `archivé` qu’une fois son rapport publié.
