@@ -167,3 +167,7 @@
 @media (prefers-reduced-motion: reduce) {
     .pt-marquee__track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }
 }
+/* Logo anime dans l'en-tete de la page Contact */
+.page-hero__logo { position: absolute; right: 7%; bottom: 3.2rem; width: min(210px, 24vw); height: auto; animation: czoo-float 5s ease-in-out infinite; filter: drop-shadow(0 12px 24px rgba(0,0,0,.35)); }
+@media (max-width: 700px) { .page-hero__logo { display: none; } }
+@media (prefers-reduced-motion: reduce) { .page-hero__logo { animation: none; } }
