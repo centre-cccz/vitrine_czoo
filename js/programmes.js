@@ -34,7 +34,7 @@
 
         cards.forEach(card => {
             const category = card.getAttribute('data-category');
-            if (filter === 'all' || category === filter) {
+            if (filter === 'all' || category === filter || (filter === 'past' && card.classList.contains('is-past')) || (filter === 'upcoming' && !card.classList.contains('is-past'))) {
                 card.style.display = 'block';
                 setTimeout(() => card.classList.add('is-visible'), 50);
             } else {

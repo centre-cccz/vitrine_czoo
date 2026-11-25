@@ -167,3 +167,41 @@
 @media (prefers-reduced-motion: reduce) {
     .pt-marquee__track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }
 }
+/* Logo anime dans l'en-tete de la page Contact */
+.page-hero__logo { position: absolute; right: 7%; bottom: 3.2rem; width: min(210px, 24vw); height: auto; animation: czoo-float 5s ease-in-out infinite; filter: drop-shadow(0 12px 24px rgba(0,0,0,.35)); }
+@media (max-width: 700px) { .page-hero__logo { display: none; } }
+@media (prefers-reduced-motion: reduce) { .page-hero__logo { animation: none; } }
+/* ===== Diaporama d'album (defilement natif) + visionneuse plein ecran ===== */
+.album { display: flex; flex-direction: column; overflow: hidden; border-radius: 24px; background: #fff; box-shadow: 0 24px 45px rgba(17,44,28,.12); }
+.album__viewport { position: relative; background: #14261c; }
+.album__track { display: flex; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.album__track::-webkit-scrollbar { display: none; }
+.album__track:focus-visible { outline: 3px solid #d4af37; outline-offset: -3px; }
+.album__slide { flex: 0 0 100%; min-width: 0; aspect-ratio: 4 / 3; margin: 0; scroll-snap-align: center; scroll-snap-stop: always; background: #14261c; }
+.album__slide img { display: block; width: 100%; height: 100%; object-fit: contain; cursor: zoom-in; }
+.album__nav { position: absolute; top: 50%; z-index: 2; display: grid; place-items: center; width: 42px; height: 42px; padding: 0 0 .12rem; transform: translateY(-50%); border: 0; border-radius: 50%; background: rgba(0,0,0,.5); color: #fff; font-size: 1.5rem; line-height: 1; cursor: pointer; transition: background .2s ease; }
+.album__nav:hover, .album__nav:focus-visible { background: rgba(0,0,0,.78); }
+.album__nav[hidden], .album__count[hidden], .album__dots[hidden] { display: none; }
+.album__nav--prev { left: 10px; }
+.album__nav--next { right: 10px; }
+.album__count { position: absolute; right: 10px; bottom: 10px; z-index: 2; padding: .2rem .65rem; border-radius: 999px; background: rgba(0,0,0,.6); color: #fff; font-size: .78rem; font-weight: 700; }
+.album__dots { display: flex; flex-wrap: wrap; justify-content: center; gap: .45rem; padding: .7rem .8rem 0; }
+.album__dot { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%; background: #cfd8cf; cursor: pointer; transition: transform .2s ease, background .2s ease; }
+.album__dot[aria-current="true"] { background: #0f6b3a; transform: scale(1.35); }
+.album__body { padding: 1rem 1.4rem 1.5rem; }
+.album__body h3 { margin: 0 0 .4rem; color: #183a2b; font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; }
+.album__body p { margin: 0 0 .6rem; color: #53675d; line-height: 1.6; }
+.rp-album { max-width: 760px; margin: 0 auto; }
+.lb { position: fixed; inset: 0; z-index: 100000; display: flex; align-items: center; justify-content: center; padding: 3rem 1rem 3.6rem; background: rgba(6,16,10,.95); }
+.lb[hidden] { display: none; }
+.lb__img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; }
+.lb__cap { position: absolute; right: 0; bottom: 1rem; left: 0; padding: 0 1rem; color: #fff; font-size: .9rem; text-align: center; }
+.lb__close, .lb__nav { position: absolute; display: grid; place-items: center; width: 46px; height: 46px; padding: 0 0 .15rem; border: 0; border-radius: 50%; background: rgba(255,255,255,.14); color: #fff; font-size: 1.7rem; line-height: 1; cursor: pointer; }
+.lb__close:hover, .lb__nav:hover, .lb__close:focus-visible, .lb__nav:focus-visible { background: rgba(255,255,255,.3); }
+.lb__close { top: .8rem; right: .8rem; }
+.lb__nav { top: 50%; transform: translateY(-50%); }
+.lb__prev { left: .8rem; }
+.lb__next { right: .8rem; }
+body.lb-open { overflow: hidden; }
+@media (max-width: 560px) { .lb__nav { top: auto; bottom: .6rem; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .album__track { scroll-behavior: auto; } }

@@ -23,6 +23,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     contact_redirect('');
 }
 
+// Anti-spam : le champ cache 'website' doit rester vide (les robots le remplissent).
+if (trim((string) ($_POST['website'] ?? '')) !== '') {
+    contact_redirect('success=1');
+}
+
 $name     = contact_clean_line((string) ($_POST['name'] ?? ''));
 $email    = trim((string) ($_POST['email'] ?? ''));
 $phone    = contact_clean_line((string) ($_POST['phone'] ?? ''));
